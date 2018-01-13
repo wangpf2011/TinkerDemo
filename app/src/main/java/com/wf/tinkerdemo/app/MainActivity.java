@@ -157,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
 
         super.onResume();
         Utils.setBackground(false);
-
     }
 
     @Override

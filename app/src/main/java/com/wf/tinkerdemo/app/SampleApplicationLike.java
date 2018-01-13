@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.multidex.MultiDex;
+import android.util.Log;
 
 import com.tencent.tinker.anno.DefaultLifeCycle;
 import com.tencent.tinker.lib.tinker.Tinker;
@@ -94,6 +95,11 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         //or you can put com.tencent.tinker.** to main dex
         TinkerManager.installTinker(this);
         Tinker tinker = Tinker.with(getApplication());
+    }
+
+    @Override
+    public void onCreate() {
+        //可以完成原来Application的初始化工作
     }
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
